@@ -44,7 +44,7 @@ body {
 /* Hero section */
 .hero {
   position: relative;
-  height: 80vh;
+  height: 400px; /* or 350px */
   background: url('/images/sample.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
