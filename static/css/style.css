@@ -50,7 +50,7 @@ body {
 .hero {
   position: relative;
   height: 40vh;        /* responsive height */
-  min-height: 200px;   /* don’t shrink too much */
+  min-height: 250px;   /* don’t shrink too much */
   max-height: 350px;   /* don’t overwhelm page */
   background: url('/images/sample.jpg') no-repeat center center/cover;
   display: flex;
