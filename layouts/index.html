@@ -23,13 +23,20 @@
       <div class="post-list">
         {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
           <article class="post-card">
-            {{ with .Params.featured_image }}
+            {{ with .Params.image }}
               <img src="{{ . }}" alt="{{ $.Title }}" class="post-image">
             {{ end }}
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p>{{ .Summary }}</p>
+            <div class="post-content">
+              <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <p>{{ .Summary }}</p>
+            </div>
           </article>
         {{ end }}
+      </div>
+
+      <div class="view-all">
+        <a href="/blog/" class="btn">View All Posts</a>
       </div>
     </div>
   </section>
