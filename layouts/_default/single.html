@@ -1,10 +1,11 @@
 {{ define "main" }}
 <article class="single-post">
-  <small>{{ .Date.Format "2006-01-02" }}</small>
   <h1>{{ .Title }}</h1>
   {{ with .Params.image }}
-    <img src="{{ . | relURL }}" alt="">
+    <img class="post-hero" src="{{ . | relURL }}" alt="{{ $.Title }}">
   {{ end }}
-  {{ .Content }}
+  <div class="post-content">
+    {{ .Content }}
+  </div>
 </article>
 {{ end }}
