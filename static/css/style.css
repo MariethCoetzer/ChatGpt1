@@ -52,7 +52,7 @@ body {
   height: 40vh;        /* responsive height */
   min-height: 250px;   /* don’t shrink too much */
   max-height: 350px;   /* don’t overwhelm page */
-  background: url('/images/sample.jpg') no-repeat center center/cover;
+  background: url('/images/sample.jpg') no-repeat center top/cover; #no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
