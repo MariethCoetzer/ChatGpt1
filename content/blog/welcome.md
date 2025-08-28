@@ -1,7 +1,7 @@
 ---
 title: "Welcome to My New Blog"
 date: 2025-08-28
-image: "images/sample.jpg"
+image: "images/blog.jpg"
 summary: "This is a sample post to show how Hugo blog posts look."
 ---
 
