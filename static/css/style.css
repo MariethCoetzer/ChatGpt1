@@ -145,7 +145,7 @@ section p {
 }
 
 .post-date {
-  font-size: 0.9rem;
+  margin: 0;           /* removes extra spacing */ #font-size: 0.9rem;
   color: #666;
   margin-bottom: 0.5rem;
 }
@@ -242,7 +242,7 @@ section p {
 
 .post-card h2,
 .post-card p {
-  margin: 0.5rem auto;
+   margin: 0.25rem 0;   /* pulls title closer to date */
   max-width: 90%;
 }
 
