@@ -255,6 +255,12 @@ section p {
   margin: 0 auto;
 }
 
+.card-link {
+  color: inherit;          /* keep normal text colors */
+  text-decoration: none;   /* remove underline */
+  display: block;          /* makes the link wrap the whole card */
+  height: 100%;
+}
 
 
 
