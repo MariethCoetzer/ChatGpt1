@@ -23,6 +23,9 @@
       <div class="post-list">
         {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
           <article class="post-card">
+            {{ with .Params.featured_image }}
+              <img src="{{ . }}" alt="{{ $.Title }}" class="post-image">
+            {{ end }}
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
             <p>{{ .Summary }}</p>
           </article>
