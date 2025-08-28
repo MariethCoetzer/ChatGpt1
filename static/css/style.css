@@ -41,10 +41,17 @@ body {
   font-weight: 500;
 }
 
+.site-nav a:hover {
+  color: #555; /* medium gray */
+  text-decoration: underline;
+}
+
 /* Hero section */
 .hero {
   position: relative;
-  height: 200px; /* or 350px */
+  height: 40vh;        /* responsive height */
+  min-height: 200px;   /* don’t shrink too much */
+  max-height: 350px;   /* don’t overwhelm page */
   background: url('/images/sample.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -54,7 +61,7 @@ body {
 }
 
 .hero-content {
-  background: none;  /* remove black box */
+  background: none; /* remove black box */
   padding: 0;
 }
 
@@ -80,20 +87,23 @@ section {
   text-align: center;
 }
 
-.about {
-  background: #fff;
-}
-
-.about h2 {
+section h2 {
   font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.about p {
+section p {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.125rem;
   line-height: 1.6;
+}
+
+/* About */
+.about {
+  background: #fff;
 }
 
 /* Recent Posts */
@@ -106,10 +116,8 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto 0;
 }
 
 .post-card {
@@ -143,9 +151,4 @@ section {
     gap: 0.75rem;
     margin-top: 1rem;
   }
-}
-
-nav ul li a:hover {
-  color: #555; /* medium gray */
-  text-decoration: underline;
 }
