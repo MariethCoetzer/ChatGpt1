@@ -160,3 +160,13 @@ section p {
     margin-top: 1rem;
   }
 }
+
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
