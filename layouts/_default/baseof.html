@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <head>
   <meta charset="UTF-8">
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <title>{{ .Site.Title }}</title>
+
+  <!-- Link to static CSS -->
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <!-- Site Header -->
   <header class="site-header">
-    <nav class="navbar container">
-      <a href="{{ "/" | relURL }}" class="logo">{{ .Site.Title }}</a>
-      <ul class="nav-links">
-        <li><a href="{{ "/" | relURL }}">Home</a></li>
-        <li><a href="{{ "/about/" | relURL }}">About</a></li>
-        <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="site-title">{{ .Site.Title }}</h1>
+      <nav class="site-nav">
+        <ul>
+          {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="site-main container">
+  <!-- Main Content -->
+  <main class="site-content">
     {{ block "main" . }}{{ end }}
   </main>
 
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
     </div>
   </footer>
 </body>
