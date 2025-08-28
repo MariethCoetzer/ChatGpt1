@@ -1,25 +1,35 @@
 {{ define "main" }}
+
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>{{ .Site.Params.heroTitle }}</h1>
+    <img src="/images/sample.jpg" alt="Hero image">
+    <div class="hero-text">
+      <h2>{{ .Site.Params.heroTitle }}</h2>
       <p>{{ .Site.Params.heroSubtitle }}</p>
     </div>
   </section>
 
+  <!-- About Section -->
   <section class="about">
-    <h2>About Me</h2>
-    <p>{{ .Site.Params.aboutText }}</p>
-  </section>
-
-  <section class="posts">
-    <h2>Recent Posts</h2>
-    <div class="post-list">
-      {{ range first 3 .Site.RegularPages }}
-        <article>
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p>{{ .Summary }}</p>
-        </article>
-      {{ end }}
+    <div class="container">
+      <h2>About Me</h2>
+      <p>{{ .Site.Params.aboutText }}</p>
     </div>
   </section>
+
+  <!-- Recent Posts Section -->
+  <section class="recent-posts">
+    <div class="container">
+      <h2>Recent Posts</h2>
+      <div class="post-list">
+        {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+          <article class="post-card">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
 {{ end }}
