@@ -53,6 +53,11 @@ body {
   color: white;
 }
 
+.hero-content {
+  background: none;  /* remove black box */
+  padding: 0;
+}
+
 .hero-text {
   position: absolute;
   top: 50%;
