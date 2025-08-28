@@ -1,19 +1,16 @@
 {{ define "main" }}
-<section class="hero">
-  <h1>My Blog</h1>
-  <p>Thoughts, stories, and ideas from my journey in data science.</p>
-</section>
-
-<div class="blog-list">
+<h1>{{ .Title }}</h1>
+<div class="post-grid">
   {{ range .Pages }}
-  <article class="blog-card">
-    <small>{{ .Date.Format "2006-01-02" }}</small>
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ with .Params.image }}
-      <img src="{{ . | relURL }}" alt="">
-    {{ end }}
-    <p>{{ .Summary }}</p>
-  </article>
+    <article class="post-card">
+      <a href="{{ .RelPermalink }}">
+        {{ with .Params.image }}
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+        {{ end }}
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Summary }}</p>
+      </a>
+    </article>
   {{ end }}
 </div>
 {{ end }}
