@@ -8,7 +8,7 @@
           <img src="{{ . | relURL }}" alt="{{ $.Title }}">
         {{ end }}
         <h2>{{ .Title }}</h2>
-        <p>{{ .Summary | truncate 120 }}</p>
+        <p>{{ .Summary | truncate 60 }}</p>
       </a>
     </article>
   {{ end }}
