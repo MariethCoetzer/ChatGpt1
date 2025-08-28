@@ -49,9 +49,9 @@ body {
 /* Hero section */
 .hero {
   position: relative;
-  height: 40vh;        /* responsive height */
-  min-height: 250px;   /* don’t shrink too much */
-  max-height: 350px;   /* don’t overwhelm page */
+  height: 55vh;        /* responsive height */
+  min-height: 300px;   /* don’t shrink too much */
+  max-height: 450px;   /* don’t overwhelm page */
   background: url('/images/sample.jpg') no-repeat center top/cover; #no-repeat center center/cover;
   display: flex;
   align-items: center;
