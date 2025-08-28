@@ -108,15 +108,13 @@ section p {
 
 /* Recent Posts Section */
 .recent-posts {
-  padding: 2rem 1rem;       /* space inside section */
-  display: flex;
-  justify-content: center;  /* center the grid */
+  padding: 2rem 1rem;
 }
 
 .recent-posts .container {
-  max-width: 1200px;        /* keeps content from spanning too wide */
-  margin: 0 auto;           /* centers the container */
-  
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
