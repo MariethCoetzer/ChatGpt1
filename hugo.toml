@@ -9,3 +9,8 @@ title = "My Hugo Site"
 
 [params]
   author = "Marieth Coetzer"
+
+[params]
+  heroTitle = "Alex Doe"
+  heroSubtitle = "Blog and Portfolio"
+  aboutText = "Aspiring Data Scientist with a passion for uncovering insights from data and building intelligent solutions. Welcome to my personal space where I share my projects, thoughts, and journey into the world of data."
