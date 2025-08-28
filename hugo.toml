@@ -1,6 +1,6 @@
 baseURL = "https://your-site.netlify.app/"
 languageCode = "en-us"
-title = "My Hugo Site"
+title = "Marieth Coetzer"
 # Note: no 'theme' line, since we're using custom layouts
 
 # Optional: generate pretty URLs without .html
