@@ -111,13 +111,16 @@ section p {
   padding: 2rem 1rem;
 }
 
-.recent-posts .container {
-  max-width: 1200px;
-  margin: 0 auto;
-
+.post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  margin-top: 2rem; /* adds spacing under the heading */
+}
+
+.recent-posts .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .recent-posts .card img {
