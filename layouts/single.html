@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="about">
+  <div class="about-container">
+    {{ with resources.Get "images/profile.jpg" }}
+      <img src="{{ .RelPermalink }}" alt="Profile picture" class="profile-img">
+    {{ end }}
+    <div class="about-text">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
