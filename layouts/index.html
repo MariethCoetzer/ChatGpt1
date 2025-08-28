@@ -22,14 +22,16 @@
     <div class="post-grid">
       {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
         <article class="post-card">
-          {{ with .Params.image }}
-            <img src="{{ . }}" alt="{{ $.Title }}" class="post-image">
-          {{ end }}
-          <div class="post-content">
-            <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p>{{ .Summary }}</p>
-          </div>
+          <a href="{{ .RelPermalink }}" class="card-link">
+            {{ with .Params.image }}
+              <img src="{{ . }}" alt="{{ $.Title }}" class="post-image">
+            {{ end }}
+            <div class="post-content">
+              <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Summary }}</p>
+            </div>
+          </a>
         </article>
       {{ end }}
     </div>
