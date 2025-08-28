@@ -1,21 +1,22 @@
 {{ define "main" }}
 <section class="hero">
-  <h1>Welcome to My Site</h1>
-  <p>Exploring data, ideas, and stories.</p>
+  <h1>Welcome to {{ .Site.Title }}</h1>
+  <p>Your space for fresh thoughts and ideas.</p>
 </section>
 
 <section class="recent-posts">
   <h2>Recent Posts</h2>
-  <div class="blog-list">
-    {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
-    <article class="blog-card">
-      <small>{{ .Date.Format "2006-01-02" }}</small>
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      {{ with .Params.image }}
-        <img src="{{ . | relURL }}" alt="">
-      {{ end }}
-      <p>{{ .Summary }}</p>
-    </article>
+  <div class="post-grid">
+    {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+      <article class="post-card">
+        <a href="{{ .RelPermalink }}">
+          {{ with .Params.image }}
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+          {{ end }}
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary }}</p>
+        </a>
+      </article>
     {{ end }}
   </div>
 </section>
